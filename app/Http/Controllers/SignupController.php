@@ -397,7 +397,7 @@ class SignupController extends Controller
         try{
         $data=BookingModel::find($id);
         $data->delete();
-        return redirect('/adminviewbookings#booking');
+        return redirect('/adminhome');
         
     } catch (\Illuminate\Database\QueryException $e) {
         echo "<script>alert('Cannot delete or update a parent row: a foreign key constraint fails');window.location='/adminhome';</script>"; 

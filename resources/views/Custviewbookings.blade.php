@@ -186,10 +186,7 @@ body{
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 class="mb-0">Payment : </h6>        <span class="text-secondary">{{$activebooking->subcategory->Payment}}</span>
                   </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <a href="#deleteEmployeeModal" class="btn btn-dark"  data-toggle="modal"><span>Delete</span></a>	
-         
-                     </li>
+                 
 
                 </ul>
                 </div>
@@ -275,6 +272,12 @@ body{
                       <small>Payment : {{$futurebooking->subcategory->Payment}}</small>
                       <div  style="height: 5px">
                               </div>
+
+                              <small> <a href="#deleteEmployeeModal" class="btn btn-dark"  data-toggle="modal"><span>Delete</span></a>	</small>
+                      <div  style="height: 5px">
+                              </div>
+
+                             
                     </div>
                   </div>
                 </div>

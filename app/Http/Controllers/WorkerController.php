@@ -348,6 +348,30 @@ class WorkerController extends Controller
 
     }
 
+    public function getworkersearch()
+    {
+
+        $location=LocationModel::all();
+        return view ('Workersearch',compact('location'));
+    }
+
+
+
+    public function workersearch(Request $request)
+    {
+        
+        $getloc=request('location');
+        $locationid=LocationModel::where('Location','=',$getloc)->first();
+            $workerview=WorkerModel::query()
+        ->where('Locationid', 'LIKE' , "%{$locationid->id}%")
+        ->get();
+
+        
+        return view('Custviewworkers',compact('workerview'));
+       
+          
+    }
+
 
 
 }

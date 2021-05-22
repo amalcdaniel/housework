@@ -257,7 +257,9 @@ Route::get('/workerdashboard',[SignupController::class,'workerdashboard']);
 
 Route::get('/adminviewbookings',[SignupController::class,'adminbookview']);
 
+Route::get('/searchworker',[WorkerController::class,'getworkersearch']);
 
+Route::post('/search',[WorkerController::class,'workersearch']);
 
 Route::get('/messages',[MessageController :: class,'adminview']);
 

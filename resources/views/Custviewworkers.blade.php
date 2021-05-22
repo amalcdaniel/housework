@@ -200,6 +200,8 @@ section .section-title {
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
+      <a href="\searchworker" class="get-started-btn scrollto">SEARCH</a>
+
       <a href="\home" class="get-started-btn scrollto">HOME</a>
      
     

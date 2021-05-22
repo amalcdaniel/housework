@@ -273,7 +273,7 @@ body{
                       <div  style="height: 5px">
                               </div>
 
-                              <small> <a href="#deleteEmployeeModal" class="btn btn-dark"  data-toggle="modal"><span>Delete</span></a>	</small>
+                              <small> 	<a class="btn btn-danger" href={{"/deletebooking/".$futurebooking->id}}> <span>Delete</span></a>	</small>
                       <div  style="height: 5px">
                               </div>
 
@@ -339,7 +339,7 @@ body{
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
 					
-					<a class="btn btn-danger" href={{"/deletebooking/".$futurebooking->id}}> <span>Delete</span></a>
+				
 				
 				</div>
 			</form>

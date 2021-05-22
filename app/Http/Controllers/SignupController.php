@@ -276,9 +276,9 @@ class SignupController extends Controller
         $data = SignupModel::where('Email','=', session('LoggedUser'))->first();
         $cdate = Carbon::now();
         $pdate=$cdate->toDateString();
-        $booking = BookingModel::where('Customerid','=', $data['id'])->where('Date','<=',$cdate)->where('Status','=','Success')->get();
-        $activebooking = BookingModel::where('Customerid','=', $data['id'])->where('Date','=',$pdate)->where('Status','=','Success')->get();
-        $futurebooking = BookingModel::where('Customerid','=', $data['id'])->where('Date','>',$cdate)->where('Status','=','Success')->get();
+        $booking = BookingModel::where('Customerid','=',$data['id'])->where('Date','<=',$cdate)->where('Status','=','Success')->get();
+        $activebooking = BookingModel::where('Customerid','=',$data['id'])->where('Date','=',$pdate)->where('Status','=','Success')->get();
+        $futurebooking = BookingModel::where('Customerid','=',$data['id'])->where('Date','>',$cdate)->where('Status','=','Success')->get();
         return view('Custviewbookings',compact('booking','data','activebooking','futurebooking'));
 
     }
@@ -409,10 +409,10 @@ class SignupController extends Controller
         try{
         $data=BookingModel::find($id);
         $data->delete();
-        return redirect('/custviewbooks');
+        return redirect('/home');
         
     } catch (\Illuminate\Database\QueryException $e) {
-        echo "<script>alert('Cannot perform requested action now.Try again after sometime.');window.location='/custviewbooks';</script>"; 
+        echo "<script>alert('Cannot perform requested action now.Try again after sometime.');window.location='/home';</script>"; 
     }
     }
     

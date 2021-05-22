@@ -290,7 +290,7 @@ table.table .avatar {
                         <td><img width="150" height="100" class="avatar" src="{{ URL::asset('assets/worker_img/'.$worker->Filepath) }}"></td>
                         <td>{{$worker->Description}}</td>
                         <td>{{$worker->Status}}</td>
-						<td><a class="btn btn-dark" href={{"/editworkero/".$worker->id}}">EDIT</a></td>
+						<td><a class="btn btn-dark" href={{"/editworkero/".$worker->id}}>EDIT</a></td>
 						<td>
 						<a class="btn btn-danger" href={{"/deleteworker/".$worker->id}}> <span>Delete</span></a>	
                         </td>

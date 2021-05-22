@@ -294,7 +294,7 @@ table.table .avatar {
                         <td>{{$worker->Mob}}</td>
                         <td>{{$worker->Idproof}}</td>
                         <td>{{$worker->Idproofno}}</td>
-                      	<td><a class="btn btn-dark" href={{"/editworkerp/".$worker->id}}">EDIT</a></td>
+                      	<td><a class="btn btn-dark" href={{"/editworkerp/".$worker->id}}>EDIT</a></td>
                        
                         </tr>
                         @endforeach

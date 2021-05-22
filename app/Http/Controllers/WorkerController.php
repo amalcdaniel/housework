@@ -156,7 +156,7 @@ class WorkerController extends Controller
  
     
     $login=new LoginModel();
-        $login->UserName=$getemail;
+        $login->Username=$getemail;
         $login->Password=$getpass;
         $login->Usertype="Worker";
         $save= $login->save();

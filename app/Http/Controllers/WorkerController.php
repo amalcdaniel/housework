@@ -166,7 +166,8 @@ class WorkerController extends Controller
 
     }
     else{
-         return redirect("/addworker#worker")->with('fail','Email already taken');
+        echo "<script>alert('Email already taken');window.location='/adminhome';</script>"; 
+  
      }
         $workerno1=$getemail;
         $data=LocationModel::all();

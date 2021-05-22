@@ -113,7 +113,7 @@ class WorkerController extends Controller
     public function store(Request $request)
     {
         $request->validate([        
-            'email'=>'required|Email|unique:worker_models',
+            'Email'=>'required|Email|unique:worker_models',
             
     ]);
     

@@ -455,45 +455,7 @@
     </form>
 
 
-    <form action="/adminregister" name="myForm" method="post">
-@if(Session::get('successs'))
-    <div class="alert alert-success">
-        {{ Session::get('success') }}
-    </div>
-@endif
-
-@if(Session::get('fail'))
-    <div class="alert alert-danger">
-        {{ Session::get('fail') }}
-    </div>
-@endif
-
-{{csrf_field()}}
-
-
-<table class="table table-borderless">
-
-
-<tr>
-    <td>EMAIL</td>
-    <td><input type="text" class="form-control" title="ENTER THE EMAIL!" name="email" placeholder="EMAIL" >
-</td>
-</tr>
-<tr>
-    <td>PASSWORD</td>
-    <td><input type="password" class="form-control" title="Minimum 5 Characters" name="pass" placeholder="PASSWORD">
-
-</td>
-</tr>
-
-
-<tr>
-    <td></td>
-    <td><button class="btn btn-warning">SIGN UP</button></td>
-</tr>
-</table>
-</form>
-
+    
 
 
        

@@ -170,7 +170,7 @@ class SignupController extends Controller
     public function store(Request $request)
     {
         $request->validate([        
-                'Email'=>'required|Email|unique:signup_models'
+                'Email'=>'required|Username|unique:login_models'
         ]);
 
         $getfname=request("fname");

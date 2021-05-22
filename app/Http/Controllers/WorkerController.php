@@ -233,7 +233,7 @@ class WorkerController extends Controller
     public function update(Request $request, $id)
     {
     $worker=WorkerModel::find($id); 
-
+        dd($worker);
     
     $getfname=request("fname");
     $getlname=request("lname");

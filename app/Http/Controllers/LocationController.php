@@ -112,6 +112,7 @@ class LocationController extends Controller
     {
         
             $data=LocationModel::find($id);
+            dd($data);
             $data->delete();
             return redirect('/adminviewloc#location');
             

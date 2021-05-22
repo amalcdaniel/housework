@@ -110,12 +110,13 @@ class LocationController extends Controller
      */
     public function delete($id)
     {
-        
+        try{
             $data=LocationModel::find($id);
-            dd($data);
             $data->delete();
             return redirect('/adminviewloc#location');
             
-       
+        } catch (\Illuminate\Database\QueryException $e) {
+            echo "<script>alert('Cannot delete or update a parent row: a foreign key constraint fails');window.location='/adminhome';</script>"; 
+        }
     }
 }

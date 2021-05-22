@@ -196,7 +196,7 @@ class WorkerController extends Controller
      */
     public function edit($id)
     {
-        dd("wer");
+        dd($id);
         $workerview=WorkerModel::find($id);
 
         dd($workerview);

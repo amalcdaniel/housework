@@ -72,7 +72,7 @@ class SignupController extends Controller
         $feedback = new FeedbackModel();
         $feedback->Customerid=$getid;
         $feedback->Feedback=$getfeedback;
-        $feedback->WorkerName=$getname;
+        $feedback->Workername=$getname;
         $feedback->save();
         $data = ['LoggedUserInfo'=>SignupModel::where('Email','=', session('LoggedUser'))->first()];
         return view ('Customerhome',$data);
@@ -534,7 +534,7 @@ class SignupController extends Controller
     public function workerdashboard()
     {
         $data = WorkerModel::where('Email','=', session('LoggedUser'))->first();
-        return view ('workerhome',compact('data'));
+        return view ('Workerhome',compact('data'));
     }
 
     public function custchangepassword()

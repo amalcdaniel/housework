@@ -82,7 +82,7 @@
             
                             <div class="col-sm-12 form-group">
                     
-                                <textarea class="form-control" name="feedback" type="textarea" id="message" name="message" maxlength="6000" rows="7" placeholder="Ente your feedback here"></textarea>
+                                <textarea class="form-control" name="feedback" type="textarea" id="message" name="message" maxlength="6000" rows="7" placeholder="Enter your feedback here"></textarea>
                             </div>
                         </div>
                         <br><br>

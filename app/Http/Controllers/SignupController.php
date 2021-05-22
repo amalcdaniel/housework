@@ -133,6 +133,7 @@ class SignupController extends Controller
 
     public function bookstore2(Request $request)
     {
+        try{
         $getid=request("ida");
         
         $status="Success";
@@ -149,7 +150,10 @@ class SignupController extends Controller
 
         Session::flash('success', 'Message sent');
         return view('Custbooking3',compact('booking'));
-
+        
+    } catch (\Illuminate\Database\QueryException $e) {
+        echo "<script>alert('ok');window.location='/home';</script>"; 
+    }
     }
 
     public function sms()

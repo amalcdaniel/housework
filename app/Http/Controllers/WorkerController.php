@@ -165,7 +165,7 @@ class WorkerController extends Controller
         $save= $login->save();
 
     }
-    if(!$save){
+    else{
          return redirect("/addworker#worker")->with('fail','Email already taken');
      }
         $workerno1=$getemail;

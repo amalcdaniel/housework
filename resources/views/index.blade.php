@@ -428,10 +428,10 @@
     </tr>
     <tr>
         <td>
-        <input type="email" class="form-control" placeholder="Email" name="email"  value="{{ old('email') }}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+        <input type="email" class="form-control" placeholder="Email" name="Email"  value="{{ old('Email') }}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
         </td>
         <tr>
-    <td><span class="text-danger">@error('email'){{ $message }} @enderror</span></td>
+    <td><span class="text-danger">@error('Email'){{ $message }} @enderror</span></td>
     </tr>
     <tr>
         <td>

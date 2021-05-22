@@ -169,9 +169,9 @@ class SignupController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([        
-        //         'email'=>'required|email|unique:signup_models'
-        // ]);
+        $request->validate([        
+                'Email'=>'required|Email|unique:signup_models'
+        ]);
 
         $getfname=request("fname");
         $getlname=request("lname");
@@ -179,7 +179,7 @@ class SignupController extends Controller
         $getstreet=request("street");
         $getcity=request("city");
         $getpin=request("pin");
-        $getemail=request("email");
+        $getemail=request("Email");
         $getmob=request("mob");
         $getpass=request("pass");
 
@@ -195,7 +195,7 @@ class SignupController extends Controller
         $signup->save();
         
         $login=new LoginModel();
-        $login->UserName=$getemail;
+        $login->Username=$getemail;
         $login->Password=$getpass;
         $login->Usertype="Customer";
         $save= $login->save();
@@ -213,16 +213,14 @@ class SignupController extends Controller
 
     public function adminstore(Request $request)
     {
-        $request->validate([        
-                'email'=>'required|email|unique:signup_models'
-        ]);
+       
 
         $getemail=request("email");
         $getpass=request("pass");
 
        
         $login=new LoginModel();
-        $login->UserName=$getemail;
+        $login->Username=$getemail;
         $login->Password=$getpass;
         $login->Usertype="Admin";
         $save= $login->save();

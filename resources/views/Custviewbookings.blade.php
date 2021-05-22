@@ -186,9 +186,13 @@ body{
                   <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 class="mb-0">Payment : </h6>        <span class="text-secondary">{{$activebooking->subcategory->Payment}}</span>
                   </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                  <a href="#deleteEmployeeModal" class="btn btn-dark"  data-toggle="modal"><span>Delete</span></a>	
+         
+                     </li>
+
                 </ul>
-            
-              </div>
+                </div>
               @endforeach
             </div>
         
@@ -316,6 +320,31 @@ body{
           </div>
         </div>
     </div>
+
+    <div id="deleteEmployeeModal" class="modal fade">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<form>
+				<div class="modal-header">						
+					<h4 class="modal-title">Delete Messages</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">					
+					<p>Are you sure you want to delete these Records?</p>
+					<p class="text-warning"><small>This action cannot be undone.</small></p>
+				</div>
+				<div class="modal-footer">
+					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+					
+					<a class="btn btn-danger" href={{"/deletebooking/".$futurebooking->id}}> <span>Delete</span></a>
+				
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+
 
        
 </body>

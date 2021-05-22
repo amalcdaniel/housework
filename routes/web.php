@@ -267,6 +267,10 @@ Route::get('/messages',[MessageController :: class,'adminview']);
 
 Route::get('/home',[SignupController::class,'dashboard']);
 
+Route::get('/deletebooking/{id}', [SignupController::class,'deletebooking']);
+
+Route::get('/custdeletebooking/{id}', [SignupController::class,'custdeletebooking']);
+
 
 Route::get('/workercatread',[WorkerController :: class,'create']);
 

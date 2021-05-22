@@ -391,6 +391,30 @@ class SignupController extends Controller
         echo "<script>alert('Cannot delete or update a parent row: a foreign key constraint fails');window.location='/adminhome';</script>"; 
     }
     }
+
+    public function deletebooking($id)
+    {
+        try{
+        $data=BookingModel::find($id);
+        $data->delete();
+        return redirect('/adminviewbookings#booking');
+        
+    } catch (\Illuminate\Database\QueryException $e) {
+        echo "<script>alert('Cannot delete or update a parent row: a foreign key constraint fails');window.location='/adminhome';</script>"; 
+    }
+    }
+    
+    public function custdeletebooking($id)
+    {
+        try{
+        $data=BookingModel::find($id);
+        $data->delete();
+        return redirect('/custviewbooks');
+        
+    } catch (\Illuminate\Database\QueryException $e) {
+        echo "<script>alert('Cannot perform requested action now.Try again after sometime.');window.location='/custviewbooks';</script>"; 
+    }
+    }
     
 
     public function adminview()

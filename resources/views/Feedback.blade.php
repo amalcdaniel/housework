@@ -56,7 +56,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="\viewteam#workers" class="get-started-btn scrollto">BOOK NOW</a>
+      <a href="\viewteam#workers" class="get-started-btn scrollto">VIEW WORKERS</a>
      
       <a href="\logout" class="get-started-btn scrollto">LOG OUT</a>
 

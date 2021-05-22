@@ -339,8 +339,8 @@ select.list-dt:focus {
                                     </div> <label class="pay">Payment*</label> 
                                     <input type="text" class="form-control" value="{{$payment}}" style="background-color:#595858; color:white;" disabled>
                                     <div class="row">
-                                        <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" placeholder="" style="background-color:#595858; color:white;" required/> </div>
-                                        <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" style="background-color:#595858; color:white;" placeholder="***" required /> </div>
+                                        <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" pattern=".{16}" title="16 digits required"  placeholder="" style="background-color:#595858; color:white;" required/> </div>
+                                        <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" pattern=".{3}" title="3 digits required"  style="background-color:#595858; color:white;" placeholder="***" required /> </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-3"> <label class="pay">Expiry Date*</label> </div>

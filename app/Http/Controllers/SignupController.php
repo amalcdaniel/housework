@@ -170,8 +170,10 @@ class SignupController extends Controller
     public function store(Request $request)
     {
         $request->validate([        
-                'Email'=>'required|Username|unique:login_models'
+                'Email'=>'required|Email|unique:signup_models'
         ]);
+
+      
 
         $getfname=request("fname");
         $getlname=request("lname");
@@ -183,6 +185,10 @@ class SignupController extends Controller
         $getmob=request("mob");
         $getpass=request("pass");
 
+        $usercount=LoginModel::where('Username','=',$getemail)->count();
+
+        if($usercount==0)
+        {
         $signup = new SignupModel();
         $signup->Fname=$getfname;
         $signup->Lname=$getlname;
@@ -199,7 +205,11 @@ class SignupController extends Controller
         $login->Password=$getpass;
         $login->Usertype="Customer";
         $save= $login->save();
-        
+        }
+        else
+        {
+            return redirect("/#team")->with('fail','Email already taken.Try another one');
+        }
         if($save){
             return redirect("/#team")->with('success','New User has been successfully registered');
          }else{

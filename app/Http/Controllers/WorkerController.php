@@ -113,7 +113,7 @@ class WorkerController extends Controller
     public function store(Request $request)
     {
         $request->validate([        
-            'Email'=>'required|Username|unique:login_models',
+            'Email'=>'required|Email|unique:worker_models',
             
     ]);
     
@@ -132,7 +132,10 @@ class WorkerController extends Controller
     $getidproof=request("idproof");
     $getidproofno=request("idproofno");
     $userInfo = CategoryModel::where('Category','=', $getcategory)->first();
+    $usercount=LoginModel::where('Username','=',$getemail)->count();
     
+    if($usercount==0)
+    {
     $worker=new WorkerModel();
     $worker->Fname=$getfname;
     $worker->Lname=$getlname;
@@ -160,6 +163,11 @@ class WorkerController extends Controller
         $login->Password=$getpass;
         $login->Usertype="Worker";
         $save= $login->save();
+
+    }
+    if(!$save){
+         return redirect("/addworker#worker")->with('fail','Email already taken');
+     }
         $workerno1=$getemail;
         $data=LocationModel::all();
         return view('Addworker2',compact('data','workerno1'));

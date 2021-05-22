@@ -291,7 +291,7 @@ table.table .avatar {
                         <td>{{$booking->Date}}</td>
                         <td>{{$booking->Time}}</td>
 						<td>
-						<a href="#deleteEmployeeModal" class="btn btn-dark"  data-toggle="modal"><span>Delete</span></a>	
+						<a class="btn btn-danger" href={{"/deletebooking/".$booking->id}}> <span>Delete</span></a>	
                      </td>
                         </tr>
                         @endforeach
@@ -319,7 +319,7 @@ table.table .avatar {
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
 					
-					<a class="btn btn-danger" href={{"/deletebooking/".$booking->id}}> <span>Delete</span></a>
+					
 				
 				</div>
 			</form>

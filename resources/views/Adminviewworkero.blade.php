@@ -292,7 +292,7 @@ table.table .avatar {
                         <td>{{$worker->Status}}</td>
 						<td><a class="btn btn-dark" href={{"/editworkero/".$worker->id}}">EDIT</a></td>
 						<td>
-                        <a href="#deleteEmployeeModal" class="btn btn-dark"  data-toggle="modal"><span>Delete</span></a>	
+						<a class="btn btn-danger" href={{"/deleteworker/".$worker->id}}> <span>Delete</span></a>	
                         </td>
                 
                         </tr>
@@ -320,7 +320,7 @@ table.table .avatar {
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-					<a class="btn btn-danger" href={{"/deleteworker/".$worker->id}}> <span>Delete</span></a>
+					
 				
 				</div>
 			</form>

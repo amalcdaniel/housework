@@ -91,7 +91,7 @@ class SignupController extends Controller
         $booking->Customerid=$getcid;
         $booking->Categoryid=$userInfo->id;
         $booking->Locationid=$userinfo->id;
-        $booking->Subcategoryid=1;
+        $booking->Subcategoryid=2;
         $booking->Workerid=1;
         $booking->Date="null";
         $booking->Time="null";

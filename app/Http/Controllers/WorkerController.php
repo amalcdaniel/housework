@@ -113,7 +113,7 @@ class WorkerController extends Controller
     public function store(Request $request)
     {
         $request->validate([        
-            'Email'=>'required|Email|unique:worker_models',
+            'Email'=>'required|Username|unique:login_models',
             
     ]);
     
@@ -123,7 +123,7 @@ class WorkerController extends Controller
     $getstreet=request("street");
     $getcity=request("city");
     $getpin=request("pin");
-    $getemail=request("email");
+    $getemail=request("Email");
     $getmob=request("mob");
     $getpass=request("pass");
     $getgender=request("gender");

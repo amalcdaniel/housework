@@ -319,7 +319,7 @@ table.table .avatar {
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
 					
-					<a class="btn btn-danger" href={{"/custdeletebooking/".$booking->id}}> <span>Delete</span></a>
+					<a class="btn btn-danger" href={{"/deletebooking/".$booking->id}}> <span>Delete</span></a>
 				
 				</div>
 			</form>

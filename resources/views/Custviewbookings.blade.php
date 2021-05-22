@@ -273,7 +273,7 @@ body{
                       <div  style="height: 5px">
                               </div>
 
-                              <small> 	<a class="btn btn-danger" href={{"/deletebooking/".$futurebooking->id}}> <span>Delete</span></a>	</small>
+                              <small> 	<a class="btn btn-danger" href={{"/custdeletebooking/".$futurebooking->id}}> <span>Delete</span></a>	</small>
                       <div  style="height: 5px">
                               </div>
 

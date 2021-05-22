@@ -1,4 +1,4 @@
-@extends("workertheme")
+@extends("Workertheme")
 @section("content")
 <section id="about" class="cta">
       <div class="container" data-aos="zoom-in">

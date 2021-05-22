@@ -42,11 +42,11 @@ Route::get('/eservice', function () {
 });
 
 Route::get('/cpservice', function () {
-    return view('CPService');
+    return view('CPservice');
 });
 
 Route::get('/ceservice', function () {
-    return view('CEService');
+    return view('CEservice');
 });
 
 Route::get('/cpinstallation', function () {
@@ -170,9 +170,7 @@ Route::get('/book3', function () {
 
 ;
 
-Route::get('/test2', function () {
-    return view('test2');
-});
+
 
 Route::get('/logout',[SignupController::class, 'logout']);
 

@@ -1,4 +1,4 @@
-@extends("customertheme")
+@extends("Customertheme")
 @section("content")
 
 <!-- ======= Portfolio Section ======= -->

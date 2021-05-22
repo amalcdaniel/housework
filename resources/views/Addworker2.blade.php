@@ -1,4 +1,4 @@
-@extends("admintheme")
+@extends("Admintheme")
 @section("content")
     <div class="container">
     <div class="row">

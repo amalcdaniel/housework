@@ -212,7 +212,7 @@ class SignupController extends Controller
         }
         else
         {
-            return redirect("/#team")->with('fail','Email already taken.Try another one');
+            echo "<script>alert('Email already taken');window.location='/#team';</script>"; 
         }
         if($save){
             return redirect("/#team")->with('success','New User has been successfully registered');

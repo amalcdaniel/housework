@@ -353,7 +353,7 @@ select.list-dt:focus {
                             </tr>
                             <tr>
                             <td><strong style="color:white;">Select your Date :</strong>
-                            <input type="date" name="date" min="2018-01-01" class="form-control" style="background-color:#595858; color:white;">
+                            <input type="date" name="date" min="{{$cdate}}" class="form-control" style="background-color:#595858; color:white;">
                             </td>
                             </tr>
                             <tr>

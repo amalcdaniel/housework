@@ -100,8 +100,8 @@ class SignupController extends Controller
         $worker=WorkerModel::where('Categoryid','=',$userInfo->id)->where('Locationid','=',$userinfo->id)->where('Status','=','Active')->get();
         $subcategory = SubCategoryModel::where('Categoryid','=',$userInfo->id)->get();
         $lastinsertedid=$booking->id;
-        
-         return view ('Custbooking1',compact('worker','subcategory','lastinsertedid'));
+        $cdate = Carbon::now();
+         return view ('Custbooking1',compact('worker','subcategory','lastinsertedid','cdate'));
 
     }
 

@@ -199,7 +199,7 @@ class WorkerController extends Controller
         
         $workerview=WorkerModel::find($id);
 
-        dd($workerview);
+        
 
         return view('Admineditworkerp',compact('workerview'));
     }

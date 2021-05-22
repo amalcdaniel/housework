@@ -1,4 +1,4 @@
-@extends("customertheme")
+@extends("Customertheme")
 @section("content")
 
 <section id="about" class="cta">

@@ -85,7 +85,7 @@ body {
 <form action="/customereditprocess/{{ $customerview->id }}" method="post">
                   {{csrf_field()}}
 		<h2>Edit My Profile<span>.</span></h2>
-		<p>Worker id : {{$customerview->id}}</p>
+		<p>Customer id : {{$customerview->id}}</p>
 		<hr>
         <div class="form-group">
         

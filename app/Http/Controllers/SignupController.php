@@ -350,7 +350,7 @@ class SignupController extends Controller
             
           $booking=BookingModel::select('*')
           ->whereMonth('Date',$getmonth)
-          ->get();
+          ->first();
           return view('Adminbookreport',compact('booking','workercount','customercount','bookingcount','reviewcount'));
       }
 

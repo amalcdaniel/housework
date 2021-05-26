@@ -472,6 +472,7 @@ class SignupController extends Controller
                 }
                 if($userInfo->Usertype=="Admin")
                 {
+                    $request->session()->put('LoggedUser','admin@gmail.com');
                     return redirect('/adminhome');
                 }
                 if($userInfo->Usertype=="Worker")

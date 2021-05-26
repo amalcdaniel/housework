@@ -116,9 +116,7 @@
 
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
-
-      <a href="#about" ></a>
-      <a href="\logout" class="get-started-btn scrollto">LOG OUT</a>
+      <a href="\#about" class="get-started-btn scrollto">LOG OUT</a>
       
 
     </div>

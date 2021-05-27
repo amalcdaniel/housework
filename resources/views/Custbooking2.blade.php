@@ -338,6 +338,7 @@ select.list-dt:focus {
                                         <div class='radio' data-value="paypal"><img src="https://icqsearchandrecovery.com/wp-content/uploads/2018/09/b70ee5898c25f2391523d66fcfeecf00.png" width="200px" height="100px"></div> <br>
                                     </div> <label class="pay">Payment*</label> 
                                     <input type="text" class="form-control" value="{{$payment}}" style="background-color:#595858; color:white;" disabled>
+                                    This is only the base payment for the service and additional payment after inspection if required.
                                     <div class="row">
                                         <div class="col-9"> <label class="pay">Card Number*</label> <input type="text" name="cardno" pattern=".{16}" title="16 digits required"  placeholder="" style="background-color:#595858; color:white;" required/> </div>
                                         <div class="col-3"> <label class="pay">CVC*</label> <input type="password" name="cvcpwd" pattern=".{3}" title="3 digits required"  style="background-color:#595858; color:white;" placeholder="***" required /> </div>

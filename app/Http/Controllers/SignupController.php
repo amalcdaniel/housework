@@ -93,7 +93,7 @@ class SignupController extends Controller
         $booking->Locationid=$userinfo->id;
         $booking->Subcategoryid=2;
         $booking->Workerid=1;
-        $booking->Date="null";
+        $booking->Date="2020-09-20";
         $booking->Time="null";
         $booking->Status="null";
         $booking->save();

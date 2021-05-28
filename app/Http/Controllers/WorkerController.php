@@ -62,6 +62,15 @@ class WorkerController extends Controller
     
     }
 
+   
+    public function  custviewworkerfeedback($id)
+    {
+
+        $worker = WorkerModel::where('id','=',$id)->first();
+        $feedback=FeedbackModel::where('Workername','=',$worker->Email)->get();
+        return view('Custviewworkerfdback',compact('worker','feedback'));
+    }
+
     
 
     public function adminview1()

@@ -238,7 +238,7 @@ section .section-title {
                                     <h4 class="card-title">Location : {{$worker->location->Location}}</h4>
                                     <h4 class="card-title">Category : {{$worker->category->Category}}</h4>
                                     <p class="card-text">{{$worker->Description}}</p>
-                            
+                                    <a class="btn btn-danger" href={{"/viewworkerfeedback/".$worker->id}}> <span>Delete</span></a>
                                     
                                 </div>
                             </div>

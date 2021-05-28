@@ -301,6 +301,9 @@ Route::get('/editsubcat/{id}', [SubcategoryController::class,'edit']);
 
 Route::post('/subcategoryeditprocess/{id}', [SubcategoryController::class,'update']);
 
+Route::get('/viewworkerfeedback/{id}', [WorkerController::class,'custviewworkerfeedback']);
+
+
 Route::get('/deletesubcategory/{id}', [SubcategoryController::class,'delete']);
 
 Route::get('/editworkerp/{id}', [WorkerController::class,'edit']);

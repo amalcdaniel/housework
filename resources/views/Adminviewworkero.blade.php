@@ -294,6 +294,9 @@ table.table .avatar {
 						<td>
 						<a class="btn btn-danger" href={{"/deleteworker/".$worker->id}}> <span>Delete</span></a>	
                         </td>
+						<td>
+						<a class="btn btn-info" href={{"/changestatus/".$worker->id}}> <span>Change Status</span></a>	
+                        </td>
                 
                         </tr>
                         @endforeach

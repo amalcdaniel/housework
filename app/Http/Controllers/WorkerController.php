@@ -325,13 +325,22 @@ class WorkerController extends Controller
 
     }
 
-    public function statusupdate(Request $request)
+    public function changestatus($id)
     {
-        $getstatus=request('status'); 
-        $data = WorkerModel::where('Email','=', session('LoggedUser'))->first();
-        $worker=WorkerModel::where('Email',$data->Email)->update(['Status'=>$getstatus]); 
     
-        return redirect('/workerdashboard');
+        $worker=WorkerModel::where('id','=',$id);
+        if($worker->Status=="Active")
+        {
+            $worker=WorkerModel::where('id','=',$id)->update(['Status'=>'Inactive']); 
+        } 
+        if($worker->Status=="Inactive")
+        {
+            $worker=WorkerModel::where('id','=',$id)->update(['Status'=>'Active']); 
+        } 
+    
+    
+        return redirect('/adminviewworkero#worker');
+        
 
     }
 

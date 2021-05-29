@@ -107,7 +107,7 @@ body {
        </div>
        <div class="form-group">
        <select name="category" id="category" style="background-color:#595858; color:white;" class="form-control" >
-
+		<option selected> {{$workerview->category->Category}} </option>
         @foreach($category as $category)
         <option>{{$category->Category }}</option>
         @endforeach 
@@ -115,7 +115,7 @@ body {
        </div>
        <div class="form-group">
        <select name="location" id="location" style="background-color:#595858; color:white;" class="form-control" >
-
+	   <option selected> {{$workerview->location->Location}} </option>
         @foreach($location as $datas)
         <option>{{$datas->Location }}</option>
         @endforeach 

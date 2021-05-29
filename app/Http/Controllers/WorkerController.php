@@ -328,18 +328,21 @@ class WorkerController extends Controller
     public function changestatus($id)
     {
     
-        $worker=WorkerModel::where('id','=',$id);
+        $worker=WorkerModel::where('id','=',$id)->first();
+        
         if($worker->Status=="Active")
         {
             $worker=WorkerModel::where('id','=',$id)->update(['Status'=>'Inactive']); 
+            return redirect('/adminviewworkero#worker');
         } 
         if($worker->Status=="Inactive")
         {
             $worker=WorkerModel::where('id','=',$id)->update(['Status'=>'Active']); 
+            return redirect('/adminviewworkero#worker');
         } 
     
     
-        return redirect('/adminviewworkero#worker');
+      
         
 
     }

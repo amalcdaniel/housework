@@ -100,14 +100,15 @@ body {
 		<hr>
         <div class="form-group">
         <select name="wtype" id="wtype" class="form-control" style="background-color:#595858; color:white;" name="wtype" value="{{ $workerview->Wtype }}">
-        <option>Electrician </option>
+        <option value="{{$workerview->Wtype}}" selected>Selected</option>
+		<option>Electrician </option>
         <option>Plumber</option>
         </select>
         
        </div>
        <div class="form-group">
        <select name="category" id="category" style="background-color:#595858; color:white;" class="form-control" >
-		<option selected> {{$workerview->category->Category}} </option>
+		<option value="{{$workerview->category->Category}}" selected> Selected </option>
         @foreach($category as $category)
         <option>{{$category->Category }}</option>
         @endforeach 
@@ -115,7 +116,7 @@ body {
        </div>
        <div class="form-group">
        <select name="location" id="location" style="background-color:#595858; color:white;" class="form-control" >
-	   <option selected> {{$workerview->location->Location}} </option>
+	   <option value="{{$workerview->location->Location}}" selected>Selected  </option>
         @foreach($location as $datas)
         <option>{{$datas->Location }}</option>
         @endforeach 

@@ -291,9 +291,6 @@ table.table .avatar {
                         <td>{{$booking->subcategory->Payment}}</td>
                         <td>{{$booking->Date}}</td>
                         <td>{{$booking->Time}}</td>
-						<td>
-						<a class="btn btn-danger" href={{"/deletebooking/".$booking->id}}> <span>Delete</span></a>	
-                     </td>
                         </tr>
                         @endforeach
 				</tbody>
@@ -357,11 +354,11 @@ table.table .avatar {
 
 
 
-<script type="text/javascript" src="src/jspdf.min.js"></script>
+<script type="text/javascript" src="../src/jspdf.min.js"></script>
 
-<script type="text/javascript" src="src/jspdf.plugin.autotable.min.js"></script>
+<script type="text/javascript" src="../src/jspdf.plugin.autotable.min.js"></script>
 
-<script type="text/javascript" src="src/tableHTMLExport.js"></script>
+<script type="text/javascript" src="../src/tableHTMLExport.js"></script>
 
 <script type="text/javascript">
   

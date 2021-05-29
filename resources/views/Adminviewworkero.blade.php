@@ -295,10 +295,10 @@ table.table .avatar {
 						<a class="btn btn-danger" href={{"/deleteworker/".$worker->id}}> <span>Delete</span></a>	
                         </td>
 						<td>
-						<a class="btn btn-info" href={{"/changestatus/".$worker->id}}> <span>Change Status</span></a>	
+						<a class="btn btn-dark" href={{"/changestatus/".$worker->id}}> <span>Change Status</span></a>	
                         </td>
 						<td>
-						<a class="btn btn-info" href={{"/viewworkerbookings/".$worker->id}}> <span>Change Status</span></a>	
+						<a class="btn btn-dark" href={{"/viewworkerbookings/".$worker->id}}> <span>Recent Bookings</span></a>	
                         </td>
                 
                         </tr>

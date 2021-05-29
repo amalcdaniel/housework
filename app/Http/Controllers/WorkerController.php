@@ -405,6 +405,13 @@ class WorkerController extends Controller
           
     }
 
+    public function workerbookings($id)
+    {
+        $worker=WorkerModel::where('id','=',$id)->first();
+        $booking=BookingModel::where('Workerid','=',$id)->get();
+        return view('Adminviewworkerb',compact('booking','worker'));
+    }
+
 
 
 }

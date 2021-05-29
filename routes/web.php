@@ -306,6 +306,9 @@ Route::get('/viewworkerfeedback/{id}', [WorkerController::class,'custviewworkerf
 Route::get('/changestatus/{id}', [WorkerController::class,'changestatus']);
 
 
+Route::get('/viewworkerbookings/{id}', [WorkerController::class,'workerbookings']);
+
+
 Route::get('/deletesubcategory/{id}', [SubcategoryController::class,'delete']);
 
 Route::get('/editworkerp/{id}', [WorkerController::class,'edit']);

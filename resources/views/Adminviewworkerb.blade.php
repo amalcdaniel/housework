@@ -1,7 +1,3 @@
-@extends("Admintheme")
-@section("content")
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,10 +13,11 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <style>
-
 body {
 	color: #566787;
 	background: #f5f5f5;
+    background-image:url('https://wallpapercave.com/wp/vhgYQou.jpg');
+
 	font-family: 'Varela Round', sans-serif;
 	font-size: 13px;
 }
@@ -242,65 +239,61 @@ table.table .avatar {
 .modal form label {
 	font-weight: normal;
 }	
-table.table .avatar {
-    border-radius: 50%;
-    vertical-align: middle;
-    margin-right: 10px;
-}
 </style>
-
+<br>
+<br>
+<br>
+<a href="/adminhome" class="get-started-btn scrollto"><button class="btn btn-info" style="margin-left:1230px;">HOME</button></a>
 </head>
-<section id="worker">
+<section id="booking">
 <div class="container-xl">
 	<div class="table-responsive">
 		<div class="table-wrapper">
 			<div class="table-title">
 				<div class="row">
 					<div class="col-sm-6">
-						<h2>Manage <b>Workers Official Info</b></h2>
+						<h2>View <b>Bookings</b></h2>
 					</div>
 					<div class="col-sm-6">
-					<a href="#Modal" class="btn btn-info"  data-toggle="modal"><span>Download</span></a>
-							
+							<a href="#Modal" class="btn btn-info"  data-toggle="modal"><span>Download</span></a>
 					</div>
 				</div>
 			</div>
 			<table id="example" class="table table-striped table-hover">
+
 				<thead>
 					<tr>
-                        <th>Worker ID</th>
-                        <th>Worker Type</th>
-						<th>Category ID</th>
-                        <th>Location ID</th>
-                        <th>Worker Image</th>
-                        <th>Description</th>
-                        <th>Current Status</th>
 						
+						<th>Booking ID</th>
+                        <th>Customer Name</th>
+                        <th>Worker Name</th>
+                        <th>Category Name</th>
+                        <th>Subcategory Name</th>
+                        <th>Location</th>
+                        <th>Payment</th>
+                        <th>Date</th>
+                        <th>Time</th>
+						
+					
 					</tr>
 				</thead>
 				<tbody>
 					      
-                @foreach($worker as $worker)
+                @foreach($booking as $booking)
                     <tr>
                    
-                        <td>{{$worker->id}}</td>
-                        <td>{{$worker->Wtype}}</td>
-                        <td>{{$worker->Categoryid}}</td>
-                        <td>{{$worker->Locationid}}</td>	
-                        <td><img width="150" height="100" class="avatar" src="{{ URL::asset('assets/worker_img/'.$worker->Filepath) }}"></td>
-                        <td>{{$worker->Description}}</td>
-                        <td>{{$worker->Status}}</td>
-						<td><a class="btn btn-dark" href={{"/editworkero/".$worker->id}}>EDIT</a></td>
+                        <td>{{$booking->id}}</td>
+                        <td>{{$booking->customer->Fname}} {{$booking->customer->Lname}}</td>
+                        <td>{{$booking->worker->Fname}} {{$booking->worker->Lname}}</td>
+                        <td>{{$booking->category->Category}}</td>
+                        <td>{{$booking->subcategory->Subcategory}}</td>
+                        <td>{{$booking->location->Location}}</td>
+                        <td>{{$booking->subcategory->Payment}}</td>
+                        <td>{{$booking->Date}}</td>
+                        <td>{{$booking->Time}}</td>
 						<td>
-						<a class="btn btn-danger" href={{"/deleteworker/".$worker->id}}> <span>Delete</span></a>	
-                        </td>
-						<td>
-						<a class="btn btn-info" href={{"/changestatus/".$worker->id}}> <span>Change Status</span></a>	
-                        </td>
-						<td>
-						<a class="btn btn-info" href={{"/viewworkerbookings/".$worker->id}}> <span>Change Status</span></a>	
-                        </td>
-                
+						<a class="btn btn-danger" href={{"/deletebooking/".$booking->id}}> <span>Delete</span></a>	
+                     </td>
                         </tr>
                         @endforeach
 				</tbody>
@@ -317,7 +310,7 @@ table.table .avatar {
 		<div class="modal-content">
 			<form>
 				<div class="modal-header">						
-					<h4 class="modal-title">Delete Worker</h4>
+					<h4 class="modal-title">Delete Messages</h4>
 					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				</div>
 				<div class="modal-body">					
@@ -326,6 +319,7 @@ table.table .avatar {
 				</div>
 				<div class="modal-footer">
 					<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+					
 					
 				
 				</div>
@@ -374,21 +368,22 @@ table.table .avatar {
   $("#json").on("click",function(){
     $("#example").tableHTMLExport({
       type:'json',
-      filename:'workerpersonaldetails.json'
+      filename:'bookingreport.json'
     });
   });
 
   $("#pdf").on("click",function(){
     $("#example").tableHTMLExport({
       type:'pdf',
-      filename:'workerpersonaldetails.pdf'
+      filename:'bookingreport.pdf',
+	  orientation:'landscape'
     });
   });
 
   $("#csv").on("click",function(){
     $("#example").tableHTMLExport({
       type:'csv',
-      filename:'workerpersonaldetails.csv'
+      filename:'bookingreport.csv'
     });
   });
 
@@ -396,5 +391,3 @@ table.table .avatar {
 
 
 
-
-@endsection

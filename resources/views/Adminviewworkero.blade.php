@@ -270,8 +270,8 @@ table.table .avatar {
 					<tr>
                         <th>Worker ID</th>
                         <th>Worker Type</th>
-						<th>Category ID</th>
-                        <th>Location ID</th>
+						<th>Category</th>
+                        <th>Location</th>
                         <th>Worker Image</th>
                         <th>Description</th>
                         <th>Current Status</th>
@@ -285,8 +285,8 @@ table.table .avatar {
                    
                         <td>{{$worker->id}}</td>
                         <td>{{$worker->Wtype}}</td>
-                        <td>{{$worker->Categoryid}}</td>
-                        <td>{{$worker->Locationid}}</td>	
+                        <td>{{$worker->category->Category}}</td>
+                        <td>{{$worker->location->Location}}</td>	
                         <td><img width="150" height="100" class="avatar" src="{{ URL::asset('assets/worker_img/'.$worker->Filepath) }}"></td>
                         <td>{{$worker->Description}}</td>
                         <td>{{$worker->Status}}</td>

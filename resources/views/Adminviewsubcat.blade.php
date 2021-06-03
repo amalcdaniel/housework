@@ -276,7 +276,7 @@ table.table .avatar {
                     <tr>
                    
                         <td>{{$subcategory->id}}</td>
-                        <td>{{$subcategory->Categoryid}}</td>
+                        <td>{{$subcategory->category->Category}}</td>
                         <td>{{$subcategory->Subcategory}}</td>
                         <td>{{$subcategory->Payment}}</td>
 						<td><a class="btn btn-dark" href={{"/editsubcat/".$subcategory->id}}>EDIT</a></td>

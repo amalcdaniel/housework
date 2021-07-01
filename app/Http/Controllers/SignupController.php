@@ -121,7 +121,7 @@ class SignupController extends Controller
         $workercount=BookingModel::where('Workerid','=',$workerinfo->id)->where('Date','=',$getdate)->where('Time','=',$gettime)->count();
         if($workercount>0)
         {   
-            BookinModel::where('id','=',$getid)->delete();
+            BookingModel::where('id','=',$getid)->delete();
             return redirect("/custbook")->with('fail','Booking slot is already occupied. Please choose another slot');
         }
        
